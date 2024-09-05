@@ -6,10 +6,9 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 18:03:45 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/05 12:27:47 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:41:07 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_isdigit(int c)
 {
@@ -18,6 +17,7 @@ int	ft_isdigit(int c)
 	else
 		return (0);
 }
+
 /*
 #include <stdio.h>
 int	main(void)
