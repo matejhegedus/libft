@@ -1,29 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/04 17:18:46 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/05 19:30:24 by mhegedus         ###   ########.fr       */
+/*   Created: 2024/09/05 18:03:36 by mhegedus          #+#    #+#             */
+/*   Updated: 2024/09/05 19:54:59 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+#include <stddef.h>
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-size_t	ft_strlen(const char *s);
-void	*memset(void *s, int c, size_t n);
-int		ft_bzero(int c);
-int		ft_memcpy(int c);
-int		ft_memmove(int c);
-int		ft_strlcpy(int c);
-int		ft_strlcat(int c);
-#endif
+void	*ft_memset(void *s, int c, size_t n)
+{
+	size_t	i;
+	
+	i = 0;
+	while (i < n)
+	{
+		((char *)s)[i] = c;
+		i++;
+	}
+	return (s);
+}
+
+#include <stdio.h>
+int main(void)
+{
+	char str[] = "alphabet!";
+	printf("%s", (char *)ft_memset(str, 'Y', 4));
+}
