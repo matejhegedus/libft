@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:40:27 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/05 17:58:43 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/05 18:01:01 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlen(const char *s)
 {
-	int	char_count;
+	size_t	char_count;
 
 	char_count = 0;
 	while (s[char_count] != '\0')
