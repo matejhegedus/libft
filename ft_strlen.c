@@ -6,16 +6,18 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:40:27 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/05 17:56:57 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:58:43 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stddef.h>
 
 size_t	ft_strlen(const char *s)
 {
 	int	char_count;
 
 	char_count = 0;
-	while (str[char_count] != '\0')
+	while (s[char_count] != '\0')
 		char_count++;
 	return (char_count);
 }
