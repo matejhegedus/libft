@@ -6,3 +6,4 @@ The objective of this project is recreating standard system functions without us
 What I've learned in this project:
 - Makefile
 - Header files
+- Working with github
