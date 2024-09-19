@@ -6,25 +6,25 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:27:40 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 14:27:41 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/19 18:58:03 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	str_len(char *str)
+#include <stddef.h>
+
+size_t	str_len(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-	}
 	return (i);
 }
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < size - 1 && src[i])
@@ -32,10 +32,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	if (size > 0)
+		dst[i] = '\0';
 	return (str_len(src));
 }
-
 /*
 #include <stdio.h>
 int	main(void)
