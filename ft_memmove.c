@@ -6,13 +6,13 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:42:32 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 15:28:29 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/19 19:22:31 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy_reverse(void *dest, const void *src, size_t n)
+static void	*ft_memcpy_reverse(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 
