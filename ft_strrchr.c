@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 20:22:13 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 20:43:48 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/19 21:03:28 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t i;
-	char *c_occ;
+	size_t	i;
+	char	*c_occ;
 
 	i = 0;
 	c_occ = 0;
