@@ -6,21 +6,12 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:40:22 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 21:55:45 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/20 13:35:12 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-static size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 static size_t	ft_substrcmp(const char *substr, const char *str)
 {

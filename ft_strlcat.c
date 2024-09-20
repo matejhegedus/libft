@@ -6,21 +6,12 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 18:59:17 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 19:55:01 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/20 13:35:22 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-static size_t	ft_strlen(const char *c)
-{
-	int	len;
-
-	len = 0;
-	while (c[len])
-		len++;
-	return (len);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
