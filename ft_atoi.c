@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:56:23 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/20 09:50:44 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/20 11:24:09 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_atoi(const char *nptr)
 	else
 		return (result);
 }
-
+/*
 #include <stdio.h>
 int main(int argc, char **argv)
 {
@@ -66,3 +66,4 @@ int main(int argc, char **argv)
 	}
 	// printf("%d\n", ft_atoi("\n \t\v\f\r---45679"));
 }
+*/
