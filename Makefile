@@ -17,16 +17,16 @@ $(NAME):
 	ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c ft_strnstr.c \
 	ft_strrchr.c ft_tolower.c ft_toupper.c -c
 
-test: $(OBJ) test.o
-	$(CC) $(CFLAGS) $(OBJ) test.o -o test.out
+test.out: $(OBJ) test.o
+	$(CC) $(CFLAGS) $(OBJ) test.o -o $@
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
-	rm -vf $(OBJ)
+	rm -vf $(OBJ) test.o test.out
 fclean: clean
 	rm -vf $(NAME)
-re:
+re: fclean all
 
 .PHONY=all clean fclean re
