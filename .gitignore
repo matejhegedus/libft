@@ -1,4 +1,6 @@
 *.out
+*.o
 *.gch
+*.a
 .vscode/
 test.c
