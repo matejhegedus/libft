@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/04 17:18:46 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/24 19:24:03 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/09/25 13:06:02 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*strdup(const char *s);
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 #endif
