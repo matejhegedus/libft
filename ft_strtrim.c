@@ -82,6 +82,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int main(void)
 {
-	printf("%s", ft_strtrim("   Trim this  ", "r Ti"));
+	printf("%s\n", ft_strtrim("   Trim this  ", "r Ti"));
 }
 */
