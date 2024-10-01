@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 21:09:54 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/01 21:38:19 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/01 21:46:19 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	result_len;
-	char	*result;
-	size_t	i;
+	unsigned int	result_len;
+	char			*result;
+	unsigned int	i;
 
 	result_len = ft_strlen(s);
 	result = malloc(result_len + 1);
