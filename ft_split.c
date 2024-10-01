@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:55:15 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/01 20:33:10 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/01 22:44:16 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,16 +51,13 @@ static char const	*skip_delimiter(char const *s, char c)
 	return (s);
 }
 
-char	**ft_split(char const *s, char c)
+static void	fill_word_array(char **result, char const *s, size_t num_of_words,
+		char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	num_of_words;
 	size_t	word_len;
-	char	**result;
 
-	num_of_words = count_words(s, c);
-	result = malloc(num_of_words * sizeof(char *) + 1);
 	s = skip_delimiter(s, c);
 	i = 0;
 	while (i < num_of_words)
@@ -80,19 +77,30 @@ char	**ft_split(char const *s, char c)
 	}
 	result[i] = malloc(1 * sizeof(char));
 	result[i][0] = '\0';
+}
+
+char	**ft_split(char const *s, char c)
+{
+	size_t	num_of_words;
+	char	**result;
+
+	num_of_words = count_words(s, c);
+	result = malloc((num_of_words + 1) * sizeof(char *));
+	fill_word_array(result, s, num_of_words, c);
 	return (result);
 }
 /*
 #include <stdio.h>
-
 int	main(void)
 {
 	char	**arr;
 
 	arr = ft_split("  This is a    String   ", ' ');
-	for (int i = 0; i < 5; i++)
+	int i = 0;
+	while (arr[i][0])
 	{
 		printf("%s\n", arr[i]);
+		i++;
 	}
 }
 */
