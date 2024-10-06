@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:04:54 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 21:15:08 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/06 22:18:51 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*chars;
+	unsigned char	c_find;
 
 	chars = (unsigned char *)s;
+	c_find = (unsigned char) c;
 	i = 0;
 	while (i < n)
 	{
-		if (chars[i] == c)
+		if (chars[i] == c_find)
 			return ((void *)&(chars[i]));
 		i++;
 	}
