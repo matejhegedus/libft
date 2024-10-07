@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:15:26 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/25 18:55:36 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 00:21:04 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static size_t	find_end(char const *s1, char const *set)
 	size_t	j;
 
 	i = ft_strlen(s1) - 1;
-	while (s1[i])
+	while (i > 0)
 	{
 		j = 0;
 		while (set[j])
@@ -62,26 +62,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*result;
 	size_t	start;
 	size_t	end;
-	size_t	i;
+	size_t	result_len;
 
 	start = find_start(s1, set);
 	end = find_end(s1, set);
 	if (end <= start)
-		return (NULL);
-	result = malloc(end - start + 1);
-	i = start;
-	while (i <= end)
-	{
-		result[i - start] = s1[i];
-		i++;
-	}
-	result[i] = '\0';
+		result_len = 0;
+	else
+		result_len = end - start + 1;
+	result = ft_substr(s1, start, result_len);
 	return (result);
 }
 /*
 #include <stdio.h>
 int main(void)
 {
-	printf("%s\n", ft_strtrim("   Trim this  ", "r Ti"));
+	char s1[] = " lorem ipsum dolor sit amet";
+	char *result = ft_strtrim(s1, " l");
+	printf("%s\n", result);
 }
 */
