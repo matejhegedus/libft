@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 09:55:36 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/20 13:24:48 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 01:39:03 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*mem;
 	size_t	i;
 
-	if (nmemb == 0 || is_multiply_overflow(nmemb, size))
+	if (nmemb == 0 || size == 0)
+		return (malloc(0));
+	if (is_multiply_overflow(nmemb, size))
 		return (NULL);
 	mem = malloc(nmemb * size);
 	if (mem == NULL)
