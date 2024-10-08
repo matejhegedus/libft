@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:40:22 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/08 20:57:03 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 21:06:07 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 
 	little_len = ft_strlen(little);
+	if (big[0] == '\0' && little[0] == '\0')
+		return ((char *)big);
+	if (len < little_len)
+		return (NULL);
 	i = 0;
 	while (big[i] && i <= (len - little_len))
 	{
