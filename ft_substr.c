@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 10:08:10 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/06 23:36:33 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 01:42:36 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		result_len = 0;
-	if (start + len <= s_len)
+	else if (start + len <= s_len)
 		result_len = len;
 	else
 		result_len = s_len - start;

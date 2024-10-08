@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/28 12:55:15 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/08 00:42:22 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 01:59:45 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,14 @@ static void	fill_word_array(char **result, char const *s, size_t num_of_words,
 	{
 		word_len = get_word_len(s, delimiter);
 		result[i] = ft_substr(s, 0, word_len);
+		if (result[i] == NULL)
+		{
+			while (--i)
+				free(result[i]);
+			free(result);
+			result = NULL;
+			return ;
+		}
 		s = s + word_len;
 		s = skip_delimiter(s, delimiter);
 		i++;
@@ -78,6 +86,8 @@ char	**ft_split(char const *s, char c)
 
 	num_of_words = count_words(s, c);
 	result = malloc((num_of_words + 1) * sizeof(char *));
+	if (result == NULL)
+		return (NULL);
 	fill_word_array(result, s, num_of_words, c);
 	return (result);
 }
@@ -87,8 +97,7 @@ int	main(void)
 {
 	char	**arr;
 
-	arr = ft_split("lorem ipsum dolor sit amet, consectetur adipiscing elit. \
-Sed non risus. Suspendisse", ' ');
+	arr = ft_split(" This    iS a STRING !!!    ", ' ');
 	int i = 0;
 	while (arr[i])
 	{
