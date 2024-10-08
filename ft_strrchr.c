@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 20:22:13 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 21:03:28 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 20:03:54 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,21 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
-	char	*c_occ;
+	char	*c_found;
+	char	c_char;
 
+	c_char = c % 128;
 	i = 0;
-	c_occ = 0;
+	c_found = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-			c_occ = ((char *)&(s[i]));
+		if (s[i] == c_char)
+			c_found = ((char *)&(s[i]));
 		i++;
 	}
-	if (c == '\0')
-		c_occ = (char *)&(s[i]);
-	return (c_occ);
+	if (c_char == '\0')
+		c_found = (char *)&(s[i]);
+	return (c_found);
 }
 /*
 #include <stdio.h>

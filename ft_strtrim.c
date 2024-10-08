@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:15:26 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/08 00:21:04 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 20:11:22 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	start = find_start(s1, set);
 	end = find_end(s1, set);
-	if (end <= start)
+	if (end < start)
 		result_len = 0;
 	else
 		result_len = end - start + 1;
@@ -77,8 +77,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 #include <stdio.h>
 int main(void)
 {
-	char s1[] = " lorem ipsum dolor sit amet";
-	char *result = ft_strtrim(s1, " l");
+	char s1[] = "abcdba";
+	char *result = ft_strtrim(s1, "acb");
 	printf("%s\n", result);
 }
 */
