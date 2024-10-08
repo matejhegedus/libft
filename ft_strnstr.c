@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:40:22 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/06 22:27:12 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/08 20:57:03 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t	little_len;
 
 	little_len = ft_strlen(little);
-	if (len < little_len)
-		return (NULL);
-	if (little[0] == '\0')
-		return ((char *)big);
 	i = 0;
 	while (big[i] && i <= (len - little_len))
 	{
@@ -35,8 +31,13 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 }
 /*
 #include <stdio.h>
+#include <bsd/string.h>
 int	main(void)
 {
-	printf("%s\n", ft_strnstr("This is a test string", "test", 21));
+	//printf("%s\n", strnstr("faketext", "fake", 3));
+
+	if (ft_strnstr(NULL, "fake", 3) == NULL)
+		printf("null\n");
+	//ft_strnstr("faketext", "fake", 3);
 }
 */
