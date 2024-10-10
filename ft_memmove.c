@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:42:32 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/10 12:12:55 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:42:11 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(dest, src, n);
 	return (dest);
 }
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 int	main(int argc, char **argv)
@@ -54,3 +54,4 @@ int	main(int argc, char **argv)
 		printf("res: %s", (char *)ft_memmove(dest, src, 4));
 	}
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:19:40 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/10 12:05:20 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:42:44 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
-
+/*
 #include <stdio.h>
 int	main(int argc, char **argv)
 {
@@ -56,4 +56,4 @@ int	main(int argc, char **argv)
 		printf("9. %d\n", ft_memcmp(s3, s2, 1));
 	}
 }
-
+*/

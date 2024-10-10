@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 18:03:36 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/10 10:29:37 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:42:00 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ int main(int argc, char ** argv)
 	{
 		s1 = strdup(argv[1]);
 		s2 = strdup(argv[1]);
-		printf("ft_memset(\"%s\"[%d], %c, %d);:\n", argv[1],  atoi(argv[3]), argv[2][0], atoi(argv[4]));
+		printf("ft_memset(\"%s\"[%d], %c, %d);:\n",
+			argv[1], atoi(argv[3]), argv[2][0], atoi(argv[4]));
 		// ft_memset(&s1[atoi(argv[3])], argv[2][0], atoi(argv[4]));
 		memset(&s2[atoi(argv[3])], argv[2][0], atoi(argv[4]));
 		printf("%s\n", s1);		
