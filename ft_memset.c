@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 18:03:36 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/09 14:05:32 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 10:29:37 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -50,3 +50,4 @@ int main(int argc, char ** argv)
 		printf("%s\n", str);
 	}
 }
+*/

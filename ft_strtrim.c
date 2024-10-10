@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:15:26 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/08 20:11:22 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 10:39:51 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,10 +75,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 /*
 #include <stdio.h>
-int main(void)
+int main(int argc, char **argv)
 {
-	char s1[] = "abcdba";
-	char *result = ft_strtrim(s1, "acb");
-	printf("%s\n", result);
+	if (argc == 3)
+	{
+		char *s1 = argv[1];
+		char *result = ft_strtrim(s1, argv[2]);
+		printf("%s\n", result);
+	}
+	else
+	{
+		char s1[] = "abcdba";
+		char *result = ft_strtrim(s1, "acb");
+		printf("%s\n", result);
+	}
 }
 */

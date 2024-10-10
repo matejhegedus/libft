@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 09:55:36 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/08 01:39:03 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 11:47:22 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,29 @@ void	*ft_calloc(size_t nmemb, size_t size)
 }
 /*
 #include <stdio.h>
-int main(void)
+#include <unistd.h>
+int main(int argc, char **argv)
 {
-	int *arr;
-	arr = ft_calloc(sizeof(int), 12);
-	for (int i = 0; i < 12; i++)
+	if (argc == 3)
 	{
-		printf("%d\n", arr[i]);
+		int *arr = ft_calloc(atoi(argv[1]), atoi(argv[2]));
+		for (int i = 0; i < atoi(argv[2]); i++)
+		{
+			for (int j = 0; j < atoi(argv[1]); j++)
+			{
+				printf("%c", ((char *)arr)[i * atoi(argv[1]) + j] + '0');
+			}
+			printf("\n");
+		}
+	}
+	else
+	{
+		int *arr;
+		arr = ft_calloc(sizeof(int), 12);
+		for (int i = 0; i < 12; i++)
+		{
+			printf("%d\n", arr[i]);
+		}
 	}
 }
 */

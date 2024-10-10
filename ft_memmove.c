@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 14:42:32 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 19:22:31 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:12:55 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,24 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		ft_memcpy(dest, src, n);
 	return (dest);
 }
-/*
+
 #include <stdio.h>
-int main(void)
+#include <stdlib.h>
+int	main(int argc, char **argv)
 {
-	char str[] = "ABCDEFGHIJKLMNOPQ";
-	char *dest = &(str[2]);
-	char *src = &(str[0]);
-	printf("src: %s\n", src);
-	printf("dst: %s\n", dest);
-	printf("res: %s", (char *)ft_memmove(dest, src, 4));
+	if (argc == 4)
+	{
+		char *dest = argv[1];
+		char *src = argv[2];		
+		printf("%s\n", (char *)ft_memmove(dest, src, atoi(argv[3])));
+	}
+	else
+	{
+		char str[] = "ABCDEFGHIJKLMNOPQ";
+		char *dest = &(str[2]);
+		char *src = &(str[0]);
+		printf("src: %s\n", src);
+		printf("dst: %s\n", dest);
+		printf("res: %s", (char *)ft_memmove(dest, src, 4));
+	}
 }
-*/

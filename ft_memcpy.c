@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 16:03:56 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/08 01:28:17 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:08:52 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,20 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 }
 /*
 #include <stdio.h>
-int main(void)
+#include <stdlib.h>
+int	main(int argc, char **argv)
 {
-	char src[] = "ABCDEFGHIJKLMNOPQ";
-	char dest[] = "alphabet!";
-	printf("%s", (char *)ft_memcpy(dest, src, 4));
+	if (argc == 4)
+	{
+		char *dest = argv[1];
+		char *src = argv[2];		
+		printf("%s\n", (char *)ft_memcpy(dest, src, atoi(argv[3])));
+	}
+	else
+	{
+		char src[] = "ABCDEFGHIJKLMNOPQ";
+		char dest[] = "alphabet!";
+		printf("%s", (char *)ft_memcpy(dest, src, 4));
+	}
 }
 */

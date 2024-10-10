@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/19 21:04:54 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/06 22:18:51 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 12:04:10 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,18 @@ void	*ft_memchr(const void *s, int c, size_t n)
 }
 /*
 #include <stdio.h>
-int main(void)
+#include <stdlib.h>
+int	main(int argc, char **argv)
 {
-	const char *str = "Hello WoRLD!";
-
-	printf("%s\n", str);
-	printf("%s\n", (char *)ft_memchr(str, 'o', 13));
+	if (argc == 4)
+	{
+		printf("%s\n", (char *)ft_memchr(argv[1], argv[2][0], atoi(argv[3])));
+	}
+	else
+	{
+		const char *str = "Hello WoRLD!";
+		printf("%s\n", str);
+		printf("%s\n", (char *)ft_memchr(str, 'o', 13));
+	}
 }
 */

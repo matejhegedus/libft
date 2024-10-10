@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 10:08:10 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/10/08 01:42:36 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/10 10:43:51 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 }
 /*
 #include <stdio.h>
-int main(void)
+#include <stdlib.h>
+int main(int argc, char **argv)
 {
-	const char *str = "This is a String";
-	printf("%s", ft_substr(str, 17, 1));
+	if (argc == 4)
+	{
+		printf("%s", ft_substr(argv[1], atoi(argv[2]), atoi(argv[3])));
+	}
+	else
+	{
+		const char *str = " This is a String ";
+		printf("%s", ft_substr(str, 3, 5));
+	}
 }
 */
