@@ -6,7 +6,7 @@
 /*   By: mhegedus <mhegedus@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 16:03:56 by mhegedus          #+#    #+#             */
-/*   Updated: 2024/09/19 14:30:19 by mhegedus         ###   ########.fr       */
+/*   Updated: 2024/10/13 15:11:28 by mhegedus         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,15 @@ void	ft_bzero(void *s, size_t n)
 }
 
 // #include <stdio.h>
+// #include <strings.h>
 // int	main(void)
 // {
-// 	char	str[4] = "Nice";
-//	
-// 	printf("Before: %s\n", str);
-// 	ft_bzero(str, 4);
-// 	printf("After: %s\n", str);
+// 	char	*str_orig = "Nice";
+// 	char	*str_my = "Nice";
+// 	printf("Orig Before: %s\n", str_orig);
+// 	bzero(str_orig, 4);
+// 	printf("Orig After:  %s\n", str_orig);
+// 	printf("My Before:   %s\n", str_my);
+// 	ft_bzero(str_my, 4);
+// 	printf("My After:    %s\n", str_my);
 // }

@@ -19,9 +19,6 @@ $(NAME): $(OBJ)
 %.o: %.c $(HDR)
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-test.out: $(OBJ) test.o
-	$(CC) $(CFLAGS) $(OBJ) test.o -o $@
-
 clean:
 	rm -vf $(OBJ) test.o test.out
 
